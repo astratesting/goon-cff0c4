@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-gray-100 antialiased;
+  }
+}
+
+@layer components {
+  .ledger-line {
+    background-image: linear-gradient(rgba(79, 70, 229, 0.05) 1px, transparent 1px);
+    background-size: 100% 3rem;
+  }
+
+  .data-card {
+    @apply bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg p-6 transition-all duration-300;
+  }
+
+  .data-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.15), inset 0 0 20px rgba(45, 212, 191, 0.05);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(to right, #22d3ee, #2dd4bf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(79, 70, 229, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79, 70, 229, 0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}
